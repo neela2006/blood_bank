@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="max-width:480px; margin:0 auto; padding-top:56px;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:28px;">
+        <h1 style="margin-bottom:6px;">Welcome back</h1>
+        <p>Log in to manage your donor profile, track requests, or view the admin dashboard.</p>
+      </div>
+
+      <div class="form-shell">
+        <div class="form-msg" id="formMsg"></div>
+
+        <div class="role-tabs" id="roleTabs">
+          <div class="role-tab is-active" data-role="Donor">Donor</div>
+          <div class="role-tab" data-role="Patient">Patient</div>
+          <div class="role-tab" data-role="Admin">Admin</div>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone or email</label>
+            <input type="text" id="phone" name="phone" placeholder="Registered phone number or email" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required>
+            <div class="hint">Demo login — any password is accepted for this project build.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log in as <span id="roleLabel">Donor</span></button>
+        </form>
+
+        <p class="small-print text-center" style="margin-top:18px;">New here? <a href="register.html" style="color:var(--crimson); font-weight:600;">Register as a donor</a> instead.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" style="padding:26px 0; margin-top:40px;">
+  <div class="container footer-bottom" style="border-top:none;">
+    <span>© <span data-year></span> RaktSetu. Academic project — not a substitute for emergency medical services.</span>
+    <a href="index.html" style="color:#AEB7C7;">Back to home</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

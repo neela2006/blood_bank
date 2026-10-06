@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="dash-shell container" style="padding-top:24px; padding-bottom:60px;">
+    <aside class="dash-side">
+      <span class="role-badge">Admin view</span>
+      <nav>
+        <a href="#overview" class="is-active">Overview</a>
+        <a href="#stock">Blood stock</a>
+        <a href="#requests">Requests</a>
+        <a href="#donors">Donors</a>
+      </nav>
+      <div class="small-print" style="margin-top:22px; padding-top:18px; border-top:1px solid var(--border);">
+        Demo dashboard — data is generated locally in your browser and resets if storage is cleared.
+      </div>
+    </aside>
+
+    <div class="dash-main">
+      <h2 id="overview" style="margin-bottom:4px;">Blood bank overview</h2>
+      <p style="margin-bottom:28px;">A live snapshot of donors, requests, and stock across all covered cities.</p>
+
+      <div class="dash-cards">
+        <div class="dash-card"><span>Total donors</span><strong id="statDonors">0</strong><small id="statDonorsSub"></small></div>
+        <div class="dash-card"><span>Available now</span><strong id="statAvailable">0</strong><small>Ready to be contacted</small></div>
+        <div class="dash-card"><span>Open requests</span><strong id="statOpen">0</strong><small>Awaiting a match</small></div>
+        <div class="dash-card"><span>Units in stock</span><strong id="statUnits">0</strong><small>Across 8 blood groups</small></div>
+      </div>
+
+      <div class="panel" id="stock">
+        <div class="panel-head">
+          <h3>Blood stock by group</h3>
+          <span class="small-print">Units available</span>
+        </div>
+        <div class="stock-bars" id="stockBars"></div>
+      </div>
+
+      <div class="panel" id="requests">
+        <div class="panel-head">
+          <h3>Recent emergency requests</h3>
+          <span class="small-print" id="requestCount"></span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr><th>Patient</th><th>Hospital</th><th>Group</th><th>Units</th><th>City</th><th>Urgency</th><th>Status</th><th>Posted</th></tr>
+            </thead>
+            <tbody id="requestsBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel" id="donors" style="margin-bottom:0;">
+        <div class="panel-head">
+          <h3>Donor directory</h3>
+          <span class="small-print" id="donorCount"></span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead>
+              <tr><th>Name</th><th>Group</th><th>City</th><th>Age</th><th>Status</th><th>Registered</th></tr>
+            </thead>
+            <tbody id="donorsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" style="padding:26px 0;">
+  <div class="container footer-bottom" style="border-top:none;">
+    <span>© <span data-year></span> RaktSetu. Academic project — not a substitute for emergency medical services.</span>
+    <a href="index.html" style="color:#AEB7C7;">Back to home</a>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

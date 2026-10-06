@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Donors — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Find a nearby donor</h1>
+      <p>Search the live donor directory by blood group and city. Results are ranked with available donors first.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <form id="searchForm" class="field-row-3" style="align-items:end;">
+          <div class="field" style="margin-bottom:0;">
+            <label for="bg">Blood group</label>
+            <select id="bg" name="bg">
+              <option value="">Any blood group</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="">Any city</option>
+              <option>Tirunelveli</option>
+              <option>Chennai</option>
+              <option>Madurai</option>
+              <option>Coimbatore</option>
+              <option>Trichy</option>
+              <option>Nagercoil</option>
+              <option>Tuticorin</option>
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <button type="submit" class="btn btn-primary btn-block">Search donors</button>
+          </div>
+        </form>
+        <div class="field checkbox-row" style="margin-top:14px; margin-bottom:0;">
+          <input type="checkbox" id="onlyAvailable" checked>
+          <label for="onlyAvailable" style="margin:0;">Show available donors only</label>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <p class="small-print" id="resultCount" style="margin:0;"></p>
+      </div>
+
+      <div id="results" style="display:grid; gap:12px;"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span data-year></span> RaktSetu. Academic project — not a substitute for emergency medical services.</span>
+      <a href="index.html" style="color:#AEB7C7;">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/find-donors.js"></script>
+</body>
+</html>

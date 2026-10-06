@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Blood Request — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" style="background:var(--crimson-tint); border-bottom:1px solid #F4C7CF;">
+    <div class="container">
+      <span class="pill" style="background:#fff; color:var(--crimson);">Emergency</span>
+      <h1>Post an emergency blood request</h1>
+      <p>This immediately searches the donor directory for compatible, available donors nearby and notifies them. For life-threatening emergencies, always call your nearest hospital or ambulance service as well.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="form-shell">
+        <div class="form-msg" id="formMsg"></div>
+        <form id="emergencyForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="patient">Patient name</label>
+              <input type="text" id="patient" name="patient" placeholder="Patient's full name" required>
+            </div>
+            <div class="field">
+              <label for="hospital">Hospital / location name</label>
+              <input type="text" id="hospital" name="hospital" placeholder="e.g. Government Hospital, Tirunelveli" required>
+            </div>
+          </div>
+
+          <div class="field-row-3">
+            <div class="field">
+              <label for="bloodGroup">Blood group needed</label>
+              <select id="bloodGroup" name="bloodGroup" required>
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option>
+                <option>O+</option><option>O-</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="units">Units required</label>
+              <input type="number" id="units" name="units" min="1" max="10" value="1" required>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <select id="city" name="city" required>
+                <option value="">Select</option>
+                <option>Tirunelveli</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Coimbatore</option>
+                <option>Trichy</option>
+                <option>Nagercoil</option>
+                <option>Tuticorin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Urgency</label>
+            <div class="urgency-picker" id="urgencyPicker">
+              <label class="urgency-opt is-active" data-value="Critical">
+                <input type="radio" name="urgency" value="Critical" checked> Critical
+              </label>
+              <label class="urgency-opt" data-value="Urgent">
+                <input type="radio" name="urgency" value="Urgent"> Urgent
+              </label>
+              <label class="urgency-opt" data-value="Scheduled">
+                <input type="radio" name="urgency" value="Scheduled"> Scheduled
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact number</label>
+            <input type="tel" id="contact" name="contact" placeholder="Number for donors to reach you" pattern="[0-9]{10}" required>
+          </div>
+
+          <div class="field">
+            <label for="notes">Additional notes <span style="font-weight:400; color:var(--ink-faint);">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Ward number, doctor's name, or anything donors should know"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send emergency alert</button>
+        </form>
+      </div>
+
+      <aside>
+        <div class="panel" style="margin-bottom:0;">
+          <div class="panel-head"><h3>Matching donors nearby</h3><span class="pill" id="matchCount">—</span></div>
+          <p class="small-print" id="matchHint">Fill the form to see compatible, available donors near your location update live.</p>
+          <div id="matchList" style="display:grid; gap:10px;"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span data-year></span> RaktSetu. In a life-threatening emergency, contact your nearest hospital immediately.</span>
+      <a href="index.html" style="color:#AEB7C7;">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/emergency.js"></script>
+</body>
+</html>

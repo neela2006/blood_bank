@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About the Project — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="badge-row">
+        <span class="pill">Final-year academic project</span>
+        <span class="pill">MERN Stack</span>
+        <span class="pill">Computer Science &amp; Engineering</span>
+      </div>
+      <h1>About RaktSetu</h1>
+      <p>RaktSetu — meaning "blood bridge" — is a MERN-stack platform built to connect blood donors with patients and hospitals in real time, replacing slow, manual donor searches with a live, searchable directory and instant emergency alerts.</p>
+    </div>
+  </section>
+
+  <!-- MOTIVATION & NEED -->
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>Motivation</h2>
+        <p>Blood shortages during emergencies often cost lives, and today's manual search — phone calls, social media posts, word of mouth — is simply too slow. There is no centralized way to know, instantly, who is available to donate.</p>
+        <ul style="display:grid; gap:12px; margin-top:18px;">
+          <li style="display:flex; gap:10px; font-size:0.95rem; color:var(--ink-muted);"><span class="icon-badge is-crimson" style="width:32px;height:32px;margin:0;flex-shrink:0;">🚨</span> Sends real-time emergency alerts to nearby donors</li>
+          <li style="display:flex; gap:10px; font-size:0.95rem; color:var(--ink-muted);"><span class="icon-badge" style="width:32px;height:32px;margin:0;flex-shrink:0;">📍</span> Locates the nearest available donors and blood banks</li>
+          <li style="display:flex; gap:10px; font-size:0.95rem; color:var(--ink-muted);"><span class="icon-badge is-crimson" style="width:32px;height:32px;margin:0;flex-shrink:0;">🗂️</span> Maintains donor and blood-stock records digitally</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Need, relevance &amp; significance</h2>
+        <p><strong style="color:var(--navy);">Need:</strong> reduce delay in finding donors, prevent shortages during emergencies, and support hospitals and blood banks with reliable digital records.</p>
+        <p><strong style="color:var(--navy);">Technical significance:</strong> a mobile/web application with a real-time notification system and a database for donor and stock records.</p>
+        <p><strong style="color:var(--navy);">Practical significance:</strong> easy donor registration, quick emergency-request handling, and location-based donor search for patients, donors, hospitals, and blood banks alike.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND STUDY -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Background study &amp; research gap</h2>
+        <p>Existing options — government portals, social media donor groups, and local blood-bank registers — offer some awareness, but leave a clear gap that RaktSetu is built to close.</p>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-col">
+          <h3>Today, without RaktSetu</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg> No live tracking of donor availability</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg> Delayed response during emergencies</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg> No centralized blood-stock database</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg> Donors are not notified proactively</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h3>With RaktSetu</h3>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C7A4E" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Donors register with blood group &amp; location</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C7A4E" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Instant emergency alerts to nearby donors</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C7A4E" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Nearest available donor / blood bank located automatically</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1C7A4E" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg> Live dashboard of blood stock &amp; requests</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small-print" style="margin-top:16px;">Innovation: geo-located emergency alerts that connect donors and patients within minutes.</p>
+    </div>
+  </section>
+
+  <!-- FEASIBILITY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Feasibility study</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px;" class="feasibility-grid">
+        <div class="card"><div class="icon-badge">💻</div><h3 style="font-size:0.98rem;">Technical</h3><p style="font-size:0.88rem; margin:0;">Achievable using the MERN Stack.</p></div>
+        <div class="card"><div class="icon-badge is-crimson">🖥️</div><h3 style="font-size:0.98rem;">Resource</h3><p style="font-size:0.88rem; margin:0;">Computer, internet, and VS Code.</p></div>
+        <div class="card"><div class="icon-badge">💰</div><h3 style="font-size:0.98rem;">Economic</h3><p style="font-size:0.88rem; margin:0;">Low development cost.</p></div>
+        <div class="card"><div class="icon-badge is-crimson">🤝</div><h3 style="font-size:0.98rem;">Operational</h3><p style="font-size:0.88rem; margin:0;">Simple, user-friendly interface.</p></div>
+        <div class="card"><div class="icon-badge">🗓️</div><h3 style="font-size:0.98rem;">Schedule</h3><p style="font-size:0.88rem; margin:0;">Completed within one semester.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section section--alt" id="tech">
+    <div class="container">
+      <div class="section-head">
+        <h2>Tools &amp; technologies</h2>
+        <p>Built end-to-end on the MERN stack, versioned on GitHub.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><div class="icon-badge is-crimson" style="margin:0 auto;">🌐</div><span>HTML5</span></div>
+        <div class="tech-item"><div class="icon-badge" style="margin:0 auto;">🎨</div><span>CSS3</span></div>
+        <div class="tech-item"><div class="icon-badge is-crimson" style="margin:0 auto;">⚙️</div><span>JavaScript</span></div>
+        <div class="tech-item"><div class="icon-badge" style="margin:0 auto;">⚛️</div><span>React.js</span></div>
+        <div class="tech-item"><div class="icon-badge is-crimson" style="margin:0 auto;">🟢</div><span>Node.js</span></div>
+        <div class="tech-item"><div class="icon-badge" style="margin:0 auto;">🚂</div><span>Express.js</span></div>
+        <div class="tech-item"><div class="icon-badge is-crimson" style="margin:0 auto;">🍃</div><span>MongoDB</span></div>
+        <div class="tech-item"><div class="icon-badge" style="margin:0 auto;">🐙</div><span>GitHub</span></div>
+      </div>
+      <p class="small-print" style="margin-top:18px;">This build is a front-end demonstration of the full MERN application: donor and request data are simulated with browser storage so every flow can be explored without a live server.</p>
+    </div>
+  </section>
+
+  <!-- OBJECTIVES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Project objectives (SMART)</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="icon-badge is-crimson">S</div><h3>Specific</h3><p>Connect emergency patients with nearby blood donors.</p></div>
+        <div class="card"><div class="icon-badge">M</div><h3>Measurable</h3><p>Notify donors within minutes of a request being posted.</p></div>
+        <div class="card"><div class="icon-badge is-crimson">A</div><h3>Achievable</h3><p>Build the full platform using the MERN Stack.</p></div>
+        <div class="card"><div class="icon-badge">R</div><h3>Relevant</h3><p>Reduce blood shortage during genuine emergencies.</p></div>
+        <div class="card"><div class="icon-badge is-crimson">T</div><h3>Time-bound</h3><p>Complete the project within four months.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="section section--alt">
+    <div class="container grid-2">
+      <div class="card">
+        <h3>Core functionalities</h3>
+        <ul style="display:grid; gap:8px; margin-top:12px; font-size:0.92rem; color:var(--ink-muted);">
+          <li>✓ Donor &amp; recipient registration / login</li>
+          <li>✓ Add / update donor blood group &amp; location</li>
+          <li>✓ Emergency blood-request posting</li>
+          <li>✓ Nearby donor search &amp; matching</li>
+          <li>✓ Real-time alerts &amp; notifications</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Expected deliverables</h3>
+        <ul style="display:grid; gap:8px; margin-top:12px; font-size:0.92rem; color:var(--ink-muted);">
+          <li>✓ Working web application, responsive across devices</li>
+          <li>✓ Admin dashboard for blood stock</li>
+          <li>✓ Donor &amp; request database</li>
+          <li>✓ Project report</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIMITATIONS + OUTCOME -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Limitations</h2></div>
+      <div class="grid-3">
+        <div class="card"><div class="icon-badge">✍️</div><h3 style="font-size:1rem;">Manual registration</h3><p style="font-size:0.9rem; margin:0;">Donors must register themselves; the system cannot auto-detect eligible people.</p></div>
+        <div class="card"><div class="icon-badge is-crimson">📶</div><h3 style="font-size:1rem;">Requires internet</h3><p style="font-size:0.9rem; margin:0;">Both donors and requesters need an internet connection to use the platform.</p></div>
+        <div class="card"><div class="icon-badge">🔕</div><h3 style="font-size:1rem;">Device-dependent alerts</h3><p style="font-size:0.9rem; margin:0;">Alerts rely on each donor's device notification settings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head"><h2>Expected outcome</h2></div>
+      <div class="grid-4">
+        <div class="card"><div class="icon-badge is-crimson">🩸</div><p style="margin:0; font-size:0.92rem;">Faster access to blood in emergencies</p></div>
+        <div class="card"><div class="icon-badge">⏱️</div><p style="margin:0; font-size:0.92rem;">Quick, real-time donor alerts</p></div>
+        <div class="card"><div class="icon-badge is-crimson">🗃️</div><p style="margin:0; font-size:0.92rem;">Organized donor &amp; stock management</p></div>
+        <div class="card"><div class="icon-badge">💚</div><p style="margin:0; font-size:0.92rem;">More lives saved through timely donations</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE ENHANCEMENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Future enhancements</h2></div>
+      <div class="grid-3">
+        <div class="card"><div class="icon-badge is-crimson">🤖</div><h3 style="font-size:1rem;">AI-based donor matching</h3></div>
+        <div class="card"><div class="icon-badge">💬</div><h3 style="font-size:1rem;">SMS alerts for non-app users</h3></div>
+        <div class="card"><div class="icon-badge is-crimson">🏥</div><h3 style="font-size:1rem;">Hospital &amp; blood-bank integration</h3></div>
+        <div class="card"><div class="icon-badge">📱</div><h3 style="font-size:1rem;">Dedicated mobile app</h3></div>
+        <div class="card"><div class="icon-badge is-crimson">🌍</div><h3 style="font-size:1rem;">Multi-language support</h3></div>
+        <div class="card"><div class="icon-badge">🔳</div><h3 style="font-size:1rem;">QR-based donor verification</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="section section--alt" id="references">
+    <div class="container">
+      <div class="section-head"><h2>References</h2></div>
+      <div class="grid-2">
+        <ul style="display:grid; gap:10px;">
+          <li><a href="https://www.mongodb.com/docs/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">MongoDB Documentation ↗</a></li>
+          <li><a href="https://react.dev/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">React Documentation ↗</a></li>
+          <li><a href="https://nodejs.org/en/docs" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">Node.js Documentation ↗</a></li>
+          <li><a href="https://expressjs.com/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">Express.js Documentation ↗</a></li>
+        </ul>
+        <ul style="display:grid; gap:10px;">
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">MDN Web Docs ↗</a></li>
+          <li><a href="https://www.eraktkosh.mohfw.gov.in/" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">e‑Rakt Kosh — National Blood Bank Portal ↗</a></li>
+          <li><span style="color:var(--ink-muted);">Research papers on blood-donor management systems</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-head"><h2>Project team</h2></div>
+      <div class="card" style="max-width:520px;">
+        <div style="display:flex; gap:16px; align-items:center; margin-bottom:16px;">
+          <div class="donor-avatar" style="width:56px; height:56px; font-size:1.2rem;">SN</div>
+          <div>
+            <h3 style="margin:0;">A Shenbaga Neela</h3>
+            <span class="small-print">Register No. 950023104023</span>
+          </div>
+        </div>
+        <table class="data-table" style="font-size:0.88rem;">
+          <tbody>
+            <tr><td style="color:var(--ink-faint);">Department</td><td>Computer Science and Engineering</td></tr>
+            <tr><td style="color:var(--ink-faint);">Institution</td><td>Anna University Regional Campus — Tirunelveli</td></tr>
+            <tr><td style="color:var(--ink-faint);">Submission date</td><td>July 27, 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#F4667A"/></svg>
+          RaktSetu
+        </div>
+        <p>A MERN-stack platform connecting blood donors with patients in real time — built as a final-year Computer Science engineering project.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="find-donors.html">Find Donors</a>
+        <a href="register.html">Become a Donor</a>
+        <a href="emergency.html">Emergency Request</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <a href="about.html">About &amp; Objectives</a>
+        <a href="about.html#tech">Tech Stack</a>
+        <a href="about.html#references">References</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Institution</h4>
+        <a href="about.html#team">A Shenbaga Neela</a>
+        <a href="about.html#team">Computer Science &amp; Engineering</a>
+        <a href="about.html#team">Anna University Regional Campus — Tirunelveli</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RaktSetu. Academic project — not a substitute for emergency medical services.</span>
+      <span>Built with the MERN Stack</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

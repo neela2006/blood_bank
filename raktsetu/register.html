@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Donor — RaktSetu</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C16 3 6 14.5 6 21a10 10 0 0 0 20 0C26 14.5 16 3 16 3Z" fill="#C8102E"/><path d="M11.5 21.5c0 3 2.2 5.4 5.1 5.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/></svg>
+      <span>RaktSetu<small>Blood Bank &amp; Emergency Donor Finder</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="find-donors.html">Find Donors</a>
+      <a href="register.html">Become a Donor</a>
+      <a href="emergency.html">Emergency Request</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <span data-session-slot></span>
+      <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+      <a href="emergency.html" class="btn btn-primary btn-sm">Request Blood</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="pill">Takes about 2 minutes</span>
+      <h1>Register as a blood donor</h1>
+      <p>Your details are added to the live donor directory. You'll only be contacted when a compatible request appears near you — and you can mark yourself unavailable at any time.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="form-shell">
+        <div class="form-msg" id="formMsg"></div>
+        <form id="registerForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Arun Kumar" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+
+          <div class="field-row-3">
+            <div class="field">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="18" max="65" placeholder="18–65" required>
+            </div>
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bloodGroup">Blood group</label>
+              <select id="bloodGroup" name="bloodGroup" required>
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option>
+                <option>O+</option><option>O-</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="city">City</label>
+              <select id="city" name="city" required>
+                <option value="">Select your city</option>
+                <option>Tirunelveli</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Coimbatore</option>
+                <option>Trichy</option>
+                <option>Nagercoil</option>
+                <option>Tuticorin</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="lastDonated">Last donation date <span style="font-weight:400; color:var(--ink-faint);">(optional)</span></label>
+              <input type="date" id="lastDonated" name="lastDonated">
+              <div class="hint">Leave blank if this is your first donation.</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span style="font-weight:400; color:var(--ink-faint);">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+
+          <div class="field checkbox-row">
+            <input type="checkbox" id="available" name="available" checked>
+            <label for="available" style="margin:0;">I'm currently available to donate if contacted</label>
+          </div>
+
+          <div class="field checkbox-row">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent" style="margin:0;">I consent to being contacted for genuine emergency blood requests</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Register as a donor</button>
+        </form>
+      </div>
+
+      <aside>
+        <div class="card" style="margin-bottom:20px;">
+          <div class="icon-badge is-crimson"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Who can donate?</h3>
+          <p style="margin:0; font-size:0.92rem;">Generally, donors aged 18–65, weighing over 50 kg, and in good health can donate every 3 months. This form is for registration only — eligibility is confirmed at the blood bank before any donation.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8V5l-8-3-8 3v5.2C4 17.5 12 22 12 22Z"/></svg></div>
+          <h3>Your data, protected</h3>
+          <p style="margin:0; font-size:0.92rem;">Your phone number is only shared with a hospital or patient when you match a genuine request — never sold or shown publicly.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span data-year></span> RaktSetu. Academic project — not a substitute for emergency medical services.</span>
+      <a href="index.html" style="color:#AEB7C7;">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
